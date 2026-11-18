@@ -1,0 +1,20 @@
+[Unit]
+Description=PiMobile Daemon - Raspberry Pi Remote Agent
+After=network-online.target tailscaled.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%I
+WorkingDirectory=/opt/pi-agent
+ExecStart=/opt/pi-agent/venv/bin/python /opt/pi-agent/main.py
+Restart=always
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+
+# Hardening / Sandboxing options
+ProtectHome=read-only
+NoNewPrivileges=false
+
+[Install]
+WantedBy=multi-user.target

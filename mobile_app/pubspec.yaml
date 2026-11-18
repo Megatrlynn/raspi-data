@@ -1,0 +1,31 @@
+name: pimobile
+description: "A fast, secure, and reliable mobile client for Raspberry Pi devices with Tailscale mesh support."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.5.1
+  flutter_animate: ^4.5.0
+  dartssh2: ^2.11.1
+  xterm: ^3.7.0
+  fl_chart: ^0.68.0
+  http: ^1.2.1
+  web_socket_channel: ^2.4.5
+  flutter_secure_storage: ^9.0.0
+  webview_flutter: ^4.7.0
+  shared_preferences: ^2.2.2
+  intl: ^0.19.0
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
